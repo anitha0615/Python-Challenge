@@ -4,7 +4,6 @@ election_data = os.path.join( "Resources", "election_data.csv")
 with open(election_data) as csv_file:
      csv_reader = csv.reader(csv_file, delimiter=",")
      csv_header = next(csv_file)
-     print(f"Header: {csv_header}")
      total = 0
      unique_candidate = []
      count_votes = 0
@@ -17,31 +16,26 @@ with open(election_data) as csv_file:
            unique_candidate.append(row[2])
         votes.append(row[2])   
 
-
-     #print("Total Votes"+str(total))  
-     #print(unique_candidate) 
-     count = 1
+    
+     print("Election Results")
+     print("\n")
+     print("-------------------------")
+     print("\n")
+     print("-------------------------")
      for candidate in unique_candidate:
           x = votes.count(candidate)
-          print(candidate_votes)
-          if count == 1:
-            print("==1")
-            candidate_votes['candidate_name'] = candidate
-            candidate_votes['votes']= x
-            print(candidate_votes)
-          else:
-            print("<> 1")
-            candidate_votes['candidate_name'] = candidate
-            candidate_votes['votes']= x
-            print(candidate_votes)
-          count = count + 1      
-          #print(f"{candidate} :" + str(x))
-          #print(candidate_votes)
-
-    # print(candidate_votes)     
+          pct = (x/total)*100
+          print(f"{candidate}: {round(pct,3)}% ({x})")
+          print("\n") 
+          candidate_votes[candidate] = x 
+     print("-------------------------")
+     print("\n")
+     print("Winner:" +max(candidate_votes,key = candidate_votes.get))
+     print("\n")
+     print("-------------------------")
+      
               
-              
-              
-              
+     
+               
               
       
