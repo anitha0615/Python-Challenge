@@ -21,6 +21,8 @@ with open(election_data) as csv_file:
      print("\n")
      print("-------------------------")
      print("\n")
+     print("Total Votes: "+str(total))
+     print("\n")
      print("-------------------------")
      for candidate in unique_candidate:
           x = votes.count(candidate)
