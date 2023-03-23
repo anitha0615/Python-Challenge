@@ -24,6 +24,7 @@ with open(election_data) as csv_file:
      print("Total Votes: "+str(total))
      print("\n")
      print("-------------------------")
+     print("\n")
      for candidate in unique_candidate:
           x = votes.count(candidate)
           pct = (x/total)*100
