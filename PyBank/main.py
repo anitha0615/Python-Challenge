@@ -38,3 +38,4 @@ with open(budget_data) as csv_file:
     print("Average Change: $" +str(round(avg_change,2)) +"\n")
     print("Greatest Increase in profit : "  + str(max(changeinpl, key=changeinpl.get)) + " ($" + str(max(changeinpl.values())) + ")\n")
     print("Greatest Increase in profit : "  + str(min(changeinpl, key=changeinpl.get)) + " ($" + str(min(changeinpl.values())) + ")\n")
+    print("\n")
