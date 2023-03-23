@@ -31,16 +31,10 @@ with open(budget_data) as csv_file:
 
     
     changeinpl = dict(zip(months_list,change)) # appending months_list and change list in to a dictionary
-    print("Financial Analysis")
-    print("\n")
-    print("-------------------------")
-    print("\n")
-    print("Total Months: "+str(months) ) 
-    print("\n")
-    print("Total: $"+str(total) )
-    print("\n")
-    print("Average Change: $" +str(round(avg_change,2)))
-    print("\n")
-    print("Greatest Increase in profit : "  + str(max(changeinpl, key=changeinpl.get)) + " ($" + str(max(changeinpl.values())) + ")")
-    print("\n")
-    print("Greatest Increase in profit : "  + str(min(changeinpl, key=changeinpl.get)) + " ($" + str(min(changeinpl.values())) + ")")
+    print("Financial Analysis\n")
+    print("-------------------------\n")
+    print("Total Months: "+str(months) +"\n" ) 
+    print("Total: $"+str(total)  +"\n")
+    print("Average Change: $" +str(round(avg_change,2)) +"\n")
+    print("Greatest Increase in profit : "  + str(max(changeinpl, key=changeinpl.get)) + " ($" + str(max(changeinpl.values())) + ")\n")
+    print("Greatest Increase in profit : "  + str(min(changeinpl, key=changeinpl.get)) + " ($" + str(min(changeinpl.values())) + ")\n")

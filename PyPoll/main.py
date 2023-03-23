@@ -18,25 +18,19 @@ with open(election_data) as csv_file:
 
     
      print("Election Results")
-     print("\n")
-     print("-------------------------")
-     print("\n")
+     print("\n-------------------------\n")
      print("Total Votes: "+str(total))
-     print("\n")
-     print("-------------------------")
-     print("\n")
+     print("\n-------------------------\n")
      for candidate in unique_candidate:
           x = votes.count(candidate)
           pct = (x/total)*100
           print(f"{candidate}: {round(pct,3)}% ({x})")
           print("\n") 
           candidate_votes[candidate] = x 
-     print("-------------------------")
-     print("\n")
-     print("Winner:" +max(candidate_votes,key = candidate_votes.get))
-     print("\n")
-     print("-------------------------")
-      
+     print("-------------------------\n")
+     print("Winner:" + str(max(candidate_votes,key = candidate_votes.get)))
+     print("\n-------------------------\n")
+     
               
      
                
